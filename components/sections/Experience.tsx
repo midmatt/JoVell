@@ -9,7 +9,7 @@ const EXPERIENCES = [
     title: "Romantic Getaways",
     image: "/experience-1.jpg",
     blurb:
-      "At JoVell Hospitality Group, we believe connection thrives when people share flavor, story, and experience. That\u2019s why our JoVell team designs olive oil networking activations that double as powerful team\u2011building journeys. Whether you\u2019re gathering colleagues in Florida, hosting partners in Mallorca, or curating a leadership retreat abroad, we bring our signature tastings and storytelling to you. Each experience is tailored to your destination, your culture, and your goals \u2014 blending sensory discovery with hospitality\u2011forward interaction.",
+      "Connection deepens when people share flavor, story, and experience. JoVell brings olive\u2011oil networking activations to your destination \u2014 from corporate events to romantic getaways in Florida, Mallorca, or anywhere your journey leads \u2014 blending sensory discovery with hospitality\u2011forward interaction.",
   },
   {
     title: "Group Events",
