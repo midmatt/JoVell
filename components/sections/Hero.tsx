@@ -97,8 +97,8 @@ export function Hero() {
         >
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-ink-100/10 bg-ink-800 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.7)]">
             <Image
-              src="/hero-hotel.webp"
-              alt="Portals Hills Boutique Hotel exterior"
+              src="/hero-image.jpg"
+              alt="JoVell Hospitality Group luxury event experience"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
