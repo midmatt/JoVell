@@ -38,7 +38,7 @@ export function Contact() {
           </p>
 
           <ul className="mt-12 space-y-6 text-base text-ink-100">
-            <ContactRow icon={MapPin} label="Headquarters" value="Hollywood, Florida" />
+            <ContactRow icon={MapPin} label="Headquarters" value="Fort Lauderdale, Florida" />
             <ContactRow
               icon={Mail}
               label="Mail"

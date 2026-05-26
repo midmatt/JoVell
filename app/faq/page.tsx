@@ -14,7 +14,7 @@ const FAQS: FaqItem[] = [
   {
     question: "Where is JoVell Hospitality Group based?",
     answer:
-      "Our headquarters is in Hollywood, Florida, with on-the-ground affiliates across five continents. We design from South Florida and execute everywhere the client wishes to be.",
+      "Our headquarters is in Fort Lauderdale, Florida, with on-the-ground affiliates across five continents. We design from South Florida and execute everywhere the client wishes to be.",
   },
   {
     question: "How do I book a discounted hotel room?",

@@ -116,7 +116,7 @@ export function Footer() {
                 className="mt-0.5 h-4 w-4 shrink-0 text-brand"
                 strokeWidth={1.5}
               />
-              Hollywood, Florida — USA
+              Fort Lauderdale, Florida — USA
             </li>
             <li className="flex items-start gap-3">
               <Mail
@@ -163,7 +163,7 @@ export function Footer() {
           reserved.
         </p>
         <p className="text-ink-400">
-          Crafted in Hollywood, FL · Departing daily worldwide.
+          Crafted in Fort Lauderdale, FL · Departing daily worldwide.
         </p>
       </div>
     </footer>

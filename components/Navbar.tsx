@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -42,21 +43,21 @@ export function Navbar() {
           : "bg-transparent"
       )}
     >
-      <div className="container-wide flex items-center justify-between py-5 md:py-6">
+      <div className="container-wide flex items-center justify-between py-4 md:py-5">
         <Link
           href="/"
           className="group flex items-center gap-3"
           aria-label="JoVell Hospitality Group home"
         >
-          <Logomark />
-          <div className="hidden flex-col leading-none sm:flex">
-            <span className="font-display text-xl tracking-tight text-white">
-              JoVell
-            </span>
-            <span className="text-[10px] uppercase tracking-wider2 text-ink-300">
-              Travel in Style, Globally
-            </span>
-          </div>
+          {/* Replace with /jovell-logo.png when client provides the actual file */}
+          <Image
+            src="/jovell-logo.svg"
+            alt="JoVell Hospitality Group"
+            width={160}
+            height={48}
+            className="h-10 w-auto object-contain md:h-12"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
@@ -134,19 +135,5 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  );
-}
-
-function Logomark() {
-  return (
-    <span
-      aria-hidden
-      className="relative grid h-11 w-11 place-items-center overflow-hidden rounded-full border border-brand/60 bg-gradient-to-br from-brand to-brand-800 text-white shadow-[inset_0_-10px_24px_rgba(0,0,0,0.35)]"
-    >
-      <span className="font-display text-xl leading-none tracking-tight">
-        Jv
-      </span>
-      <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.45),transparent_55%)]" />
-    </span>
   );
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Plane, Ship } from "lucide-react";
+import { ArrowRight, Plane } from "lucide-react";
 
 const HOTEL_URL = "http://c2eventz.hotelplanner.com";
 const AIR_URL = "http://bookmytravel.com/c2eventz";
@@ -20,6 +20,7 @@ export function Hero() {
       />
 
       <div className="container-wide relative grid grid-cols-1 gap-14 pb-24 lg:grid-cols-12 lg:gap-10">
+        {/* Left — Text & CTA */}
         <div className="lg:col-span-7">
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -27,7 +28,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="eyebrow text-brand"
           >
-            JoVell Hospitality Group · Est. Hollywood, FL
+            JoVell Hospitality Group · Est. Fort Lauderdale, FL
           </motion.p>
 
           <h1 className="display-heading mt-8 text-[clamp(3rem,8vw,7.5rem)] text-white">
@@ -44,7 +45,7 @@ export function Hero() {
             <SplitWords
               text="Partnerships."
               delay={0.32}
-              className="block text-brand"
+              className="block italic text-brand"
             />
           </h1>
 
@@ -55,7 +56,9 @@ export function Hero() {
             className="mt-10 max-w-xl text-lg leading-relaxed text-ink-200 md:text-xl"
           >
             Your journey begins with industry partners. From discounted suites
-            to private cruise corridors, we orchestrate the rare quietly.
+            to private cruise corridors, we orchestrate the rare quietly — with
+            an olive&#8209;oil&#8209;smooth touch that sets the tone from the
+            very first moment.
           </motion.p>
 
           <motion.div
@@ -71,7 +74,7 @@ export function Hero() {
               className="btn-primary"
             >
               Discounted Hotel Rooms
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+              <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </a>
             <a
               href={AIR_URL}
@@ -80,22 +83,12 @@ export function Hero() {
               className="btn-ghost"
             >
               Air &amp; Cruise Reservations
-              <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
+              <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
             </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t border-ink-100/10 pt-8"
-          >
-            <Stat number="14" label="Years curating travel" />
-            <Stat number="62" label="Countries chartered" />
-            <Stat number="100%" label="Member referrals" />
           </motion.div>
         </div>
 
+        {/* Right — Hero Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -104,8 +97,8 @@ export function Hero() {
         >
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-ink-100/10 bg-ink-800 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.7)]">
             <Image
-              src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&q=80&auto=format&fit=crop"
-              alt="Luxury resort terrace at golden hour"
+              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop"
+              alt="Mallorca luxury coastal resort"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -114,53 +107,21 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-transparent to-transparent" />
 
             <div className="absolute left-6 top-6 flex items-center gap-2 rounded-full border border-white/20 bg-black/30 px-4 py-2 text-[10px] uppercase tracking-[0.24em] text-white backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" />
-              Now booking — winter 2026
+              <Plane className="h-3 w-3 text-brand" strokeWidth={1.5} />
+              Miami → Mallorca
             </div>
 
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
               <div>
                 <p className="font-display text-2xl text-white">
-                  Amalfi · Italia
+                  Mallorca · Spain
                 </p>
                 <p className="text-xs uppercase tracking-[0.22em] text-ink-200">
                   Private villa &amp; chartered transit
                 </p>
               </div>
-              <ArrowUpRight
-                className="h-6 w-6 text-white"
-                strokeWidth={1.2}
-              />
             </div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9 }}
-            className="absolute -left-6 -top-6 hidden rotate-[-6deg] rounded-3xl border border-ink-100/15 bg-ink-800/80 p-4 backdrop-blur md:block"
-          >
-            <div className="flex items-center gap-3">
-              <Plane className="h-4 w-4 text-brand" strokeWidth={1.5} />
-              <span className="text-xs uppercase tracking-[0.22em] text-ink-100">
-                MIA → NCE
-              </span>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1.1 }}
-            className="absolute -bottom-6 -right-4 hidden rotate-[5deg] rounded-3xl border border-ink-100/15 bg-ink-800/80 p-4 backdrop-blur md:block"
-          >
-            <div className="flex items-center gap-3">
-              <Ship className="h-4 w-4 text-brand" strokeWidth={1.5} />
-              <span className="text-xs uppercase tracking-[0.22em] text-ink-100">
-                Yacht week · suite 04
-              </span>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
 
@@ -209,26 +170,15 @@ function SplitWords({
   );
 }
 
-function Stat({ number, label }: { number: string; label: string }) {
-  return (
-    <div>
-      <p className="font-display text-4xl text-white md:text-5xl">{number}</p>
-      <p className="mt-2 text-[11px] uppercase tracking-[0.22em] text-ink-300">
-        {label}
-      </p>
-    </div>
-  );
-}
-
 function Marquee() {
   const items = [
-    "Hollywood ✦ FL",
+    "Fort Lauderdale ✦ FL",
     "Amalfi ✦ Italia",
-    "Marrakech ✦ MA",
+    "Mallorca ✦ ES",
     "St. Barths ✦ FWI",
     "Kyoto ✦ JP",
     "Cape Town ✦ ZA",
-    "Reykjavík ✦ IS",
+    "Marrakech ✦ MA",
     "Cartagena ✦ CO",
   ];
   const reel = [...items, ...items];

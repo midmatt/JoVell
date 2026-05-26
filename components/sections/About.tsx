@@ -33,7 +33,7 @@ export function About() {
           <div className="absolute -bottom-8 -right-4 hidden w-72 rounded-3xl border border-ink-900/10 bg-bone p-6 shadow-xl md:block">
             <p className="font-display text-5xl text-brand">2009</p>
             <p className="mt-1 text-xs uppercase tracking-[0.22em] text-ink-700">
-              Founded in Hollywood, FL
+              Founded in Fort Lauderdale, FL
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-700">
               Born from a single chartered weekend that turned into a
@@ -67,17 +67,18 @@ export function About() {
               <h3 className="font-display text-2xl text-ink-900">Our Mission</h3>
               <p className="mt-3 text-ink-700">
                 To deliver journeys that feel inevitable — where every transfer,
-                room, and toast lands precisely as imagined, and often more so.
-                We measure success in returning clients, not in volume.
+                room, and toast lands precisely as imagined, and where mission
+                success is serving clients, not volume.
               </p>
             </div>
             <div>
               <h3 className="font-display text-2xl text-ink-900">Our Heritage</h3>
               <p className="mt-3 text-ink-700">
-                Rooted in the Mediterranean discipline of hospitality and
-                tempered by South Florida&apos;s warmth, JoVell maintains hand-picked
-                partnerships across five continents — boutique hoteliers,
-                private aviation, and trusted aristocracy of the trade.
+                Rooted in the Mediterranean art of hospitality and softened by
+                South Florida&apos;s easy warmth, JoVell curates partnerships
+                across five continents — from boutique hoteliers to private
+                aviation — every connection sealed with a quiet, signature swirl
+                of olive oil.
               </p>
             </div>
 

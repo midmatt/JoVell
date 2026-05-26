@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach JoVell Hospitality Group in Hollywood, Florida — luxury travel, transportation and events.",
+    "Reach JoVell Hospitality Group in Fort Lauderdale, Florida — luxury travel, transportation and events.",
 };
 
 export default function ContactPage() {
@@ -46,7 +46,7 @@ export default function ContactPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink-900/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="font-display text-2xl text-white">
-                  Hollywood, Florida
+                  Fort Lauderdale, Florida
                 </p>
                 <p className="mt-1 text-xs uppercase tracking-[0.22em] text-ink-200">
                   By appointment only · Atrium suite, level III

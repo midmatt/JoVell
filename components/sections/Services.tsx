@@ -1,25 +1,25 @@
 "use client";
 
 import Image from "next/image";
-import { Globe2, Users, Map } from "lucide-react";
+import { Globe2, CalendarHeart, Map } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 const SERVICES = [
   {
     n: "01",
-    title: "Global Logistics",
+    title: "Global Travel & Events",
     icon: Globe2,
     description:
-      "Door-to-destination orchestration — private transfers, manifest management, customs liaison and concierge layovers in over sixty countries.",
+      "Door\u2011to\u2011destination orchestration \u2014 private transfers, customs liaison, and concierge layovers across sixty\u2011plus countries, all delivered with the quiet ease of a Mediterranean breeze.",
     image:
       "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80&auto=format&fit=crop",
   },
   {
     n: "02",
-    title: "On Site Staff & Event Management",
-    icon: Users,
+    title: "The Journey Within the Tasting",
+    icon: CalendarHeart,
     description:
-      "Producers, hosts, security, and protocol officers on the ground — your event runs invisibly because we are visible to none but you.",
+      "Our tasting specialists work in soft harmony, guiding each pour and palate without ever disrupting the flow. The experience feels effortless because every detail is held with Mediterranean calm.",
     image:
       "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=1200&q=80&auto=format&fit=crop",
   },
@@ -28,7 +28,7 @@ const SERVICES = [
     title: "Phase One to Completion",
     icon: Map,
     description:
-      "From a single sketch on a napkin to the final cabin disembark — a complete production pipeline, with one direct line to your strategist.",
+      "From the first idea scribbled on a napkin to a final tasting perched on a Mallorcan cliff \u2014 wine in hand, cheese on the board, olive oil catching the last light \u2014 every moment shaped through one seamless line of guidance.",
     image:
       "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1200&q=80&auto=format&fit=crop",
   },

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -11,7 +11,7 @@ const display = Cormorant_Garamond({
   display: "swap",
 });
 
-const sans = Manrope({
+const sans = Montserrat({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
     template: "%s — JoVell Hospitality Group",
   },
   description:
-    "JoVell Hospitality Group is a luxury travel, transportation and events company based in Hollywood, Florida. Curated journeys, global logistics and unforgettable affairs.",
+    "JoVell Hospitality Group is a luxury travel, transportation and events company based in Fort Lauderdale, Florida. Curated journeys, global logistics and unforgettable affairs.",
   keywords: [
     "luxury travel",
-    "Hollywood Florida",
+    "Fort Lauderdale Florida",
     "private events",
     "hospitality",
     "group tours",
