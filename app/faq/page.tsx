@@ -54,7 +54,7 @@ const FAQS: FaqItem[] = [
   {
     question: "How do I begin?",
     answer:
-      "Email joseph.vella@jovellhg.com or call 305.900.7092. A first conversation — under thirty minutes, no obligation — is the only proper way to begin.",
+      "Email joseph@jovellhg.com or call 305.900.7092. A first conversation — under thirty minutes, no obligation — is the only proper way to begin.",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function FaqPage() {
                 <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} />
               </Link>
               <a
-                href="mailto:joseph.vella@jovellhg.com"
+                href="mailto:joseph@jovellhg.com"
                 className="btn-ghost"
               >
                 Email Joseph

@@ -1,36 +1,27 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, Heart, UsersRound, Globe } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 const EXPERIENCES = [
   {
     title: "Romantic Getaways",
-    icon: Heart,
-    image:
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80&auto=format&fit=crop",
+    image: "/experience-1.jpg",
     blurb:
-      "Private islands, candlelit moorings, and suites with vows whispered into the breeze. Curated for honeymooners, anniversaries, and quiet elopements.",
-    tag: "Just the two of you",
+      "From intimate circles of global gatherings JoVell curates hotel buy\u2011outs, gala evenings, and chartered crossings \u2014 each experience touched with a drizzle of ease and a swirl of Mediterranean charm.",
   },
   {
-    title: "Group Tours",
-    icon: UsersRound,
-    image:
-      "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1200&q=80&auto=format&fit=crop",
+    title: "Group Events",
+    image: "/experience-2.jpg",
     blurb:
-      "Friends, families, alumni, and corporate retinues — JoVell hosts groups of 8 to 800 across hotel buy-outs, gala dinners, and chartered crossings.",
-    tag: "From 8 to 800 guests",
+      "From intimate circles of eight to global gatherings of eight hundred, JoVell curates hotel buy\u2011outs, gala evenings, and chartered crossings \u2014 each experience touched with a drizzle of ease and a swirl of Mediterranean charm.",
   },
   {
     title: "Global Affiliates",
-    icon: Globe,
-    image:
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop",
+    image: "/experience-3.jpg",
     blurb:
-      "Trusted partnerships with hoteliers, sommeliers, and aviation brokers across five continents — invisible to most, indispensable to us.",
-    tag: "5 continents · 62 partners",
+      "Hand\u2011selected hoteliers, sommeliers, transportation and aviation partners, and olive\u2011oil producers across five continents \u2014 unseen by many, relied upon by us, each relationship touched with a quiet Mediterranean swirl.",
   },
 ];
 
@@ -59,9 +50,10 @@ export function Experience() {
 
           <Reveal delay={0.1} className="md:col-span-5">
             <p className="max-w-md text-base leading-relaxed text-ink-300 md:ml-auto">
-              Each engagement begins with a conversation, not a catalog. These
-              are the most common shapes our work takes — though every
-              client&apos;s story rewrites the map.
+              We craft an experience around your story — your values, your
+              culture, your purpose and your guests. Your guests leave not only
+              with new connections, but with a deeper understanding of what makes
+              your organization unique.
             </p>
           </Reveal>
         </div>
@@ -118,14 +110,10 @@ export function Experience() {
 function ExperienceCard({
   title,
   blurb,
-  tag,
-  icon: Icon,
   image,
 }: {
   title: string;
   blurb: string;
-  tag: string;
-  icon: typeof Heart;
   image: string;
 }) {
   return (
@@ -140,28 +128,13 @@ function ExperienceCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
 
-        <span className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/30 text-white backdrop-blur">
-          <Icon className="h-4 w-4" strokeWidth={1.5} />
-        </span>
-
         <div className="absolute inset-x-6 bottom-6">
-          <p className="text-[10px] uppercase tracking-[0.24em] text-brand">
-            {tag}
-          </p>
-          <h3 className="mt-3 font-display text-3xl leading-tight text-white">
+          <h3 className="font-display text-3xl leading-tight text-white">
             {title}
           </h3>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-200">
             {blurb}
           </p>
-          <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-white">
-            <span className="h-px w-6 bg-brand" />
-            Inquire
-            <ArrowUpRight
-              className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              strokeWidth={1.5}
-            />
-          </div>
         </div>
       </div>
     </article>

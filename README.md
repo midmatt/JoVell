@@ -86,7 +86,7 @@ CSS variables and tokens are declared in `app/globals.css` and
   intercepted with a confirmation flash). Connect to your provider of choice
   (Resend, SendGrid, HubSpot, etc.).
 - Email/phone in code:
-  `joseph.vella@jovellhg.com` · `305.900.7092` · Hollywood, FL.
+  `joseph@jovellhg.com` · `305.900.7092` · Fort Lauderdale, FL.
 
 ## License
 

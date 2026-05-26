@@ -1,19 +1,48 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Mail, Phone, ArrowUpRight, Check } from "lucide-react";
+import { MapPin, Mail, Phone, ArrowUpRight, Check, AlertCircle } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const isValidEmail = (email: string) =>
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
-    setStatus("sent");
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setStatus("idle"), 4000);
+    if (!isValidEmail(form.email)) {
+      setStatus("error");
+      setErrorMsg("Please enter a valid email address.");
+      return;
+    }
+
+    setStatus("sending");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Failed to send.");
+    }
   };
 
   return (
@@ -42,8 +71,8 @@ export function Contact() {
             <ContactRow
               icon={Mail}
               label="Mail"
-              value="joseph.vella@jovellhg.com"
-              href="mailto:joseph.vella@jovellhg.com"
+              value="joseph@jovellhg.com"
+              href="mailto:joseph@jovellhg.com"
             />
             <ContactRow
               icon={Phone}
@@ -52,18 +81,6 @@ export function Contact() {
               href="tel:+13059007092"
             />
           </ul>
-
-          <div className="mt-12 hidden lg:block">
-            <p className="text-[10px] uppercase tracking-[0.24em] text-ink-400">
-              Office hours
-            </p>
-            <p className="mt-2 font-display text-2xl text-white">
-              Mon — Fri · 9:00 to 19:00 EST
-            </p>
-            <p className="mt-1 text-sm text-ink-300">
-              Concierge available 24 / 7 during active travel.
-            </p>
-          </div>
         </Reveal>
 
         <Reveal delay={0.15} className="lg:col-span-7">
@@ -96,6 +113,13 @@ export function Contact() {
                 placeholder="Dates, party size, destinations, dreams..."
               />
 
+              {status === "error" && errorMsg && (
+                <p className="flex items-center gap-2 text-sm text-brand">
+                  <AlertCircle className="h-4 w-4" strokeWidth={1.5} />
+                  {errorMsg}
+                </p>
+              )}
+
               <div className="flex flex-col items-start gap-4 pt-4 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xs text-xs uppercase tracking-[0.22em] text-ink-400">
                   Replies within 1 working day. Discretion guaranteed.
@@ -103,13 +127,15 @@ export function Contact() {
                 <button
                   type="submit"
                   className="btn-primary w-full sm:w-auto"
-                  disabled={status === "sent"}
+                  disabled={status === "sending" || status === "sent"}
                 >
                   {status === "sent" ? (
                     <>
                       <Check className="h-4 w-4" strokeWidth={1.5} />
                       Received
                     </>
+                  ) : status === "sending" ? (
+                    "Sending…"
                   ) : (
                     <>
                       Send Inquiry
@@ -183,7 +209,7 @@ function Field({
 }) {
   return (
     <label htmlFor={id} className="group block">
-      <span className="block text-[10px] uppercase tracking-[0.24em] text-ink-400">
+      <span className="block text-[10px] uppercase tracking-[0.24em] text-white">
         {label}
       </span>
       {multiline ? (
@@ -195,7 +221,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="mt-3 w-full resize-none border-b border-ink-100/15 bg-transparent pb-3 font-display text-2xl text-white outline-none transition-colors placeholder:font-sans placeholder:text-base placeholder:tracking-normal placeholder:text-ink-400/60 focus:border-brand"
+          className="mt-3 w-full resize-none border-b border-ink-100/15 bg-transparent pb-3 font-display text-2xl text-white outline-none transition-colors placeholder:font-sans placeholder:text-base placeholder:tracking-normal placeholder:text-white/40 focus:border-brand"
         />
       ) : (
         <input
@@ -206,7 +232,7 @@ function Field({
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="mt-3 w-full border-b border-ink-100/15 bg-transparent pb-3 font-display text-2xl text-white outline-none transition-colors placeholder:font-sans placeholder:text-base placeholder:tracking-normal placeholder:text-ink-400/60 focus:border-brand"
+          className="mt-3 w-full border-b border-ink-100/15 bg-transparent pb-3 font-display text-2xl text-white outline-none transition-colors placeholder:font-sans placeholder:text-base placeholder:tracking-normal placeholder:text-white/40 focus:border-brand"
         />
       )}
     </label>

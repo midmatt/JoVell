@@ -124,10 +124,10 @@ export function Footer() {
                 strokeWidth={1.5}
               />
               <a
-                href="mailto:joseph.vella@jovellhg.com"
+                href="mailto:joseph@jovellhg.com"
                 className="hover:text-white"
               >
-                joseph.vella@jovellhg.com
+                joseph@jovellhg.com
               </a>
             </li>
             <li className="flex items-start gap-3">
