@@ -97,8 +97,8 @@ export function Hero() {
         >
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[2rem] border border-ink-100/10 bg-ink-800 shadow-[0_60px_120px_-40px_rgba(0,0,0,0.7)]">
             <Image
-              src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80&auto=format&fit=crop"
-              alt="Mallorca luxury coastal resort"
+              src="/hero-hotel.webp"
+              alt="Portals Hills Boutique Hotel exterior"
               fill
               priority
               sizes="(min-width: 1024px) 40vw, 90vw"
@@ -117,7 +117,7 @@ export function Hero() {
                   Mallorca · Spain
                 </p>
                 <p className="text-xs uppercase tracking-[0.22em] text-ink-200">
-                  Private villa &amp; chartered transit
+                  Portals Hills Boutique Hotel
                 </p>
               </div>
             </div>

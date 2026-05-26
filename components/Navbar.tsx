@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -49,16 +48,16 @@ export function Navbar() {
           className="group flex items-center gap-3"
           aria-label="JoVell Hospitality Group home"
         >
-          <span className="relative block h-[70px] w-[163px] shrink-0">
-            <Image
-              src="/jovell-logo.png"
-              alt="JoVell Hospitality Group"
-              fill
-              className="object-contain object-left"
-              priority
-              sizes="163px"
-            />
-          </span>
+          {/* Native img avoids next/image hydration resizing; ~20% above original h-10/md:h-12 */}
+          <img
+            src="/jovell-logo.png"
+            alt="JoVell Hospitality Group"
+            width={531}
+            height={242}
+            decoding="async"
+            fetchPriority="high"
+            className="block h-[58px] w-auto max-w-none shrink-0 object-contain object-left md:h-[70px]"
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
