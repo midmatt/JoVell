@@ -52,9 +52,9 @@ export function Navbar() {
           <Image
             src="/jovell-logo.png"
             alt="JoVell Hospitality Group"
-            width={200}
-            height={60}
-            className="h-10 w-auto object-contain md:h-12"
+            width={280}
+            height={70}
+            className="h-[70px] w-auto max-w-none object-contain"
             priority
           />
         </Link>
