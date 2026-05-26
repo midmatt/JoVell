@@ -50,11 +50,11 @@ export function Navbar() {
           aria-label="JoVell Hospitality Group home"
         >
           <Image
-            src="/jovell-logo.jpg"
+            src="/jovell-logo.png"
             alt="JoVell Hospitality Group"
             width={200}
             height={60}
-            className="h-10 w-auto object-contain brightness-0 invert md:h-12"
+            className="h-10 w-auto object-contain md:h-12"
             priority
           />
         </Link>
