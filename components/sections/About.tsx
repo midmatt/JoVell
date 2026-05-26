@@ -22,23 +22,12 @@ export function About() {
         <Reveal className="relative lg:col-span-5">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
             <Image
-              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80&auto=format&fit=crop"
-              alt="Luxury hospitality interior — chandelier and stairwell"
+              src="/legacy-image.jpg"
+              alt="JoVell Hospitality Group event"
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
             />
-          </div>
-
-          <div className="absolute -bottom-8 -right-4 hidden w-72 rounded-3xl border border-ink-900/10 bg-bone p-6 shadow-xl md:block">
-            <p className="font-display text-5xl text-brand">2009</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.22em] text-ink-700">
-              Founded in Fort Lauderdale, FL
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-ink-700">
-              Born from a single chartered weekend that turned into a
-              fourteen-year obsession with the perfect arrival.
-            </p>
           </div>
 
           <span className="vertical-text absolute -left-4 top-8 hidden text-[10px] uppercase tracking-[0.4em] text-ink-700/70 lg:block">
@@ -57,10 +46,10 @@ export function About() {
           <div className="mt-10 grid gap-8 text-base leading-relaxed text-ink-700 md:grid-cols-2">
             <p className="md:col-span-2 text-lg md:text-xl text-ink-900">
               Founded by Joseph Vella in 2009, JoVell Hospitality Group began as
-              a single, well-mannered favor — a friend needing a flawless
-              wedding in Tuscany. It has since become a quiet authority on
-              luxury travel and event production for clients who insist on
-              elegance without announcement.
+              a single, thoughtful favor—an experience crafted with care that
+              sparked a movement. Today, it stands as a quiet authority in luxury
+              travel and experiential production for clients who prefer elegance
+              without announcement.
             </p>
 
             <div>

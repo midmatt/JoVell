@@ -49,13 +49,12 @@ export function Navbar() {
           className="group flex items-center gap-3"
           aria-label="JoVell Hospitality Group home"
         >
-          {/* Replace with /jovell-logo.png when client provides the actual file */}
           <Image
-            src="/jovell-logo.svg"
+            src="/jovell-logo.jpg"
             alt="JoVell Hospitality Group"
-            width={160}
-            height={48}
-            className="h-10 w-auto object-contain md:h-12"
+            width={200}
+            height={60}
+            className="h-10 w-auto object-contain brightness-0 invert md:h-12"
             priority
           />
         </Link>

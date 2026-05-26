@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     siteName: "JoVell Hospitality Group",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
