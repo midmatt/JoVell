@@ -49,14 +49,16 @@ export function Navbar() {
           className="group flex items-center gap-3"
           aria-label="JoVell Hospitality Group home"
         >
-          <Image
-            src="/jovell-logo.png"
-            alt="JoVell Hospitality Group"
-            width={280}
-            height={70}
-            className="h-[70px] w-auto max-w-none object-contain"
-            priority
-          />
+          <span className="relative block h-[70px] w-[163px] shrink-0">
+            <Image
+              src="/jovell-logo.png"
+              alt="JoVell Hospitality Group"
+              fill
+              className="object-contain object-left"
+              priority
+              sizes="163px"
+            />
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
